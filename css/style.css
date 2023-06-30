@@ -1,0 +1,39 @@
+body{
+    background-color: #624325;
+}
+header, footer{
+    background-color: #fffaef;
+}
+.tea-color{
+    color: #f6b613;
+}
+.cubs-color{
+    color: #47a2d1;
+}
+.tea-bg{
+    background-color: #f6b613;
+}
+.cubs-bg{
+    background-color: #47a2d1;
+}
+.navs:hover{
+    color: #f6b613;
+}
+a.fb-btn:hover{
+    background: #f6b613;
+    color: #fff;
+    transition: .3s;
+ }
+ a.google-btn:hover{
+    background: #47a2d1;
+    color: #fff;
+    transition: .3s;
+ }
+a.btn:before{
+   font-weight: normal;
+   margin-right: 10px;
+}
+.dropdown-menu {
+    width: 300px;
+    height: 400px;
+}

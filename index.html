@@ -11,33 +11,34 @@
     </head>
     <body>
         <header>
-            <nav class="navbar sticky-top navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand text-wrap text-break" href="index.html">
                         <img src="img/teacubs-logo.png" alt="Tea Cubs Logo" width="36" height="30" class="d-inline-block align-text-top">
-                        <span class="tea-color">Tea</span><span class="cubs-color">Cubs</span>
+                        <span class="tea-color">Tea</span>&nbsp;<span class="cubs-color">Cubs</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item text-wrap text-break">
                                 <a class="nav-link navs" href="html/menu.html">Menu</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link navs" href="html/reservation.html">Reservations</a>
+                            <li class="nav-item text-wrap text-break">
+                                <a class="nav-link navs" role="button" data-bs-toggle="modal" data-bs-target="#reservationModal">Reservations</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item text-wrap text-break">
                                 <a class="nav-link navs" href="html/about-us.html">About Us</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item text-wrap text-break">
                                 <a class="nav-link navs" href="html/find-store.html">Find a store</a>
                             </li>
                         </ul>
-                        <span class="navbar-text">Already have an account?</span>                        
+                        <span class="navbar-text text-wrap text-break">Already have an account?</span>
+                        <!-- Login Form Dropdown -->
                         <div class="dropdown">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <button type="button" class="btn dropdown-toggle text-wrap text-break" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Login
                             </button>
                             <ul id="login-dp" class="dropdown-menu dropdown-menu-end">
@@ -67,7 +68,6 @@
                                                     <div class="help-block text-end"><a href="" class="text-decoration-none">Forget the password ?</a></div>
                                                 </div>
                                                 <div class="form-group mt-4">
-                                                    <!-- <button type="submit" class="btn btn-primary w-100">Sign in</button> -->
                                                     <a class="btn btn-primary w-100" href="html/profile.html" role="button">Sign in</a>
                                                 </div>
                                                 <div class="checkbox mt-1 mt-1">
@@ -81,15 +81,89 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- End of Login Form Dropdown -->
                     </div>
                 </div>
             </nav>
+            <!-- Reservation Modal -->
+            <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reserveModal" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content position-relative brown-bg">
+                    <button class="btn-close p-3" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body p-5">
+                            <header class="mb-1 text-center sub-header p-0 brown-bg">
+                                <img class="bi p-0" src="img/teacubs-logo.png" alt="Tea Cubs Logo" width="150" height="100">
+                                <h1 class="p-0"><span class="tea-color p-0">Tea</span>&nbsp;<span class="cubs-color p-0">Cubs</span></h1>
+                            </header>
+                            <div class="mb-0 text-center border-bottom p-2 rounded-top offWhite-bg">
+                                <h3 class="handwriting-text">Make a reservation</h3>
+                                <h5 class="text-uppercase text-gray-500 fw-normal">Reserve your table now</h5>
+                            </div>
+                            <form class="p-lg-5 was-validated rounded-bottom offWhite-bg" novalidate>
+                                <div class="row gy-3">
+                                    <div class="col-lg-12 form-floating">
+                                        <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResName" type="text" name="res_name" placeholder="Your Name" required>
+                                        <label class="form-label ms-1" for="modalResNam">Name</label>
+                                        <div class="valid-feedback">Looks Good!</div>
+                                        <div class="invalid-feedback">Please input your name!</div>
+                                    </div>
+                                    <div class="col-lg-12 form-floating">
+                                        <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResEmail" type="email" name="res_email" placeholder="email@email.com" required>
+                                        <label class="form-label ms-1" for="modalResEmail"> Email</label>
+                                        <div class="valid-feedback">Looks Good!</div>
+                                        <div class="invalid-feedback">Please input your email!</div>
+                                    </div>
+                                    <div class="col-lg-6 form-floating">
+                                        <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResNumber" type="number" name="res_number" placeholder="09XXXXXXXXX" required>
+                                        <label class="form-label ms-1" for="modalResNumber">Contact No.</label>
+                                        <div class="valid-feedback">Looks Good!</div>
+                                        <div class="invalid-feedback">Please input your contact number!</div>
+                                    </div>
+                                    <div class="col-lg-6 form-floating">
+                                        <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResPeople" type="number" name="res_people" placeholder="1" required>
+                                        <label class="form-label ms-1" for="modalResPeople">No. of Guest</label>
+                                        <div class="valid-feedback">Looks Good!</div>
+                                        <div class="invalid-feedback">Please input total number of guest (including yourself)!</div>
+                                    </div>
+                                    <div class="col-lg-12 form-floating">
+                                        <select class="form-select shadow-0 border-0 border-bottom" id="modalSelect" name="res_select" aria-placeholder="Tea Cubs Guimba" required>
+                                            <option disabled selected value="">Choose a branch</option>
+                                            <option value="1">Tea Cubs Guimba</option>
+                                            <option value="2">Tea Cubs Roxas Bagumbayan</option>
+                                            <option value="3">Tea Cubs Roxas San Mariano</option>
+                                        </select>
+                                        <label class="form-label ms-1" for="modalSelect">Branch</label>
+                                    </div>
+                                    <div class="col-lg-6 form-floating">
+                                        <input class="form-control shadow-0 border-0 border-bottom" id="modalResDate" type="date" name="res_date" placeholder="dd/mm/yy" required>
+                                        <label class="form-label ms-1" for="modalResDate">Date</label>
+                                        <div class="valid-feedback">Looks Good!</div>
+                                        <div class="invalid-feedback">Please input a date!</div>
+                                    </div>
+                                    <div class="col-lg-6 form-floating">
+                                        <input class="form-control shadow-0 border-0 border-bottom" id="modalResTime" type="time" name="res_time" placeholder="time" required>
+                                        <label class="form-label ms-1" for="modalResTime">Time</label>
+                                    </div>
+                                    <div class="col-lg-12 form-floating">
+                                        <textarea class="form-control shadow-0 px-0 border-0 border-bottom" id="modalRequest" rows="7" name="res_request" placeholder="Special request"></textarea>
+                                        <label class="form-label ms-1" for="modalRequest">Special request</label>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <button class="btn btn-primary" type="submit">Reserve now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Reservation Modal -->
         </header>
         <main>
             <section>
                 <div class="container">
                     <div class="row mt-5">
-                        <div class="col-xxl-7 col-xl-6 p-0">    
+                        <div class="col-lg-6 p-0">    
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -101,11 +175,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-5 col-xl-6 p-5 tea-bg text-center align-content-center">
-                            <h1 class="m-5">"It all starts with a cup"</h1>
-                            <p class="text-start m-3">All items are available for Pick-up or Delivery. Enjoy your favorite snacks, drinks, meals, and desserts in the comfort of your own home.</p>
+                        <div class="col-lg-6 tea-bg text-center d-flex flex-column justify-content-center align-items-center p-5 text-wrap text-break">
+                            <h1 class="mb-4">"It all starts with a cup"</h1>
+                            <p class="mb-0">All items are available for Pick-up or Delivery. Enjoy your favorite snacks, drinks, meals, and desserts in the comfort of your own home.</p>
                             <p>Get your orders now!</p>
-                            <!-- <button type="button" class="btn btn-dark">Order now</button> -->
                             <a class="btn btn-dark" href="html/menu.html" role="button">Order Now!</a>
                         </div>
                     </div>
@@ -123,7 +196,7 @@
             <section>
                 <div class="container">
                     <div class="row mt-4">
-                        <div class="col-xxl-6 col-xl-6 p-0">
+                        <div class="col-lg-6 p-0">
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -135,18 +208,73 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-6 col-xl-6 p-5 cubs-bg text-center">
-                            <h2 class="m-5">Rewards..? Freebies..?</h2>
-                            <p class="text-start m-3">Want some free drinks or free meals? Register an account and become a VIP or a Loyalty card holder and accumulate reward points everytime you order online. Use your accumulated reward points to claim your freebies.</p>
+                        <div class="col-lg-6 p-5 cubs-bg text-center d-flex flex-column justify-content-center align-items-center p-5 text-wrap text-break">
+                            <h2 class="mb-4">Rewards..? Freebies..?</h2>
+                            <p class="mb-0">Want some free drinks or free meals? Register an account and become a VIP or a Loyalty card holder and accumulate reward points everytime you order online. Use your accumulated reward points to claim your freebies.</p>
                             <p>Register an account!</p>
-                            <a class="btn btn-dark" href="html/registration.html" role="button">Join Us!</a>
+                            <a class="btn btn-dark" role="button" data-bs-toggle="modal" data-bs-target="#registrationModal">Join Us!</a>
                         </div>
                     </div>
                 </div>
+                <!-- Register Modal -->
+                <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content position-relative brown-bg">
+                        <button class="btn-close p-3" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="modal-body p-5">
+                                <header class="mb-1 text-center sub-header p-0 brown-bg">
+                                    <img class="bi p-0" src="img/teacubs-logo.png" alt="Tea Cubs Logo" width="150" height="100">
+                                    <h1 class="p-0"><span class="tea-color p-0">Tea</span>&nbsp;<span class="cubs-color p-0">Cubs</span></h1>    
+                                </header>
+                                <div class="mb-0 text-center border-bottom p-2 rounded-top offWhite-bg">
+                                    <h3 class="handwriting-text">Create an account</h3>
+                                </div>
+                                <form class="p-lg-5 was-validated rounded-bottom offWhite-bg" novalidate>
+                                    <div class="row gy-3">
+                                        <div class="col-lg-6 form-floating">
+                                            <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResFirstName" type="text" name="res_first_name" placeholder="First Name" required>
+                                            <label class="form-label ms-1" for="modalResFirstName">First name</label>
+                                            <div class="valid-feedback">Looks Good!</div>
+                                            <div class="invalid-feedback">Please input your First name!</div>
+                                        </div>
+                                        <div class="col-lg-6 form-floating">
+                                            <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResLastName" type="text" name="res_last_name" placeholder="Last Name" required>
+                                            <label class="form-label ms-1" for="modalResLastName">Last name</label>
+                                            <div class="valid-feedback">Looks Good!</div>
+                                            <div class="invalid-feedback">Please input your Last name!</div>
+                                        </div>
+                                        <div class="col-lg-12 form-floating">
+                                            <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResNumber" type="number" name="res_number" placeholder="09XXXXXXXXX" required>
+                                            <label class="form-label ms-1" for="modalResNumber">Contact No.</label>
+                                            <div class="valid-feedback">Looks Good!</div>
+                                            <div class="invalid-feedback">Please input your contact number!</div>
+                                        </div>
+                                        <div class="col-lg-12 form-floating">
+                                            <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResEmail" type="email" name="res_email" placeholder="email@email.com" required>
+                                            <label class="form-label ms-1" for="modalResEmail">Email</label>
+                                            <div class="valid-feedback">Looks Good!</div>
+                                            <div class="invalid-feedback">Please input your email!</div>
+                                        </div>
+                                        <div class="col-lg-12 form-floating">
+                                            <input class="form-control shadow-0 px-0 border-0 border-bottom" id="modalResAddress" type="text" name="res_address" placeholder="Delivery address" required>
+                                            <label class="form-label ms-1" for="modalResAddress">Delivery Address</label>
+                                            <div class="valid-feedback">Looks Good!</div>
+                                            <div class="invalid-feedback">Please input your Delivery address!</div>
+                                        </div>
+                                        <div class="col-lg-12 text-center">
+                                            <button class="btn btn-primary" type="submit">Register</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Register Modal -->  
             </section>
         </main>
         <footer>
-            <div class="container-fluid d-flex flex-wrap sticky-bottom justify-content-between align-items-center py-3 mt-5 border-top">
+            <div class="container-fluid d-flex flex-wrap sticky-bottom justify-content-between align-items-center py-3 text-wrap text-break">
                 <p class="col-md-4 m-0 p-0 text-muted">&copy; 2023 Tea Cubs Cafe. All Rights Reserved.</p>
                 <a href="index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <img class="bi me-2" src="img/teacubs-logo.png" alt="Tea Cubs Logo" width="60" height="52">

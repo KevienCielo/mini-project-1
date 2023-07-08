@@ -44,8 +44,13 @@ a.btn:before{
     margin-left: 5px;
 }
 .navs:hover{
-    color: #f6b613;
-    background-color: rgba(98, 67, 37, 0.8);
+    background-color: #f6b613;
+}
+.sub-navs:hover{
+    background-color: #47a2d1;
+}
+.current{
+    background-color: #47a2d1;
 }
 .dropdown-menu {
     width: 300px;
@@ -73,6 +78,16 @@ a.btn:before{
 .lh-tight{
     line-height: 1.25;
 }
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+/* .btn-toggle-nav a:hover, .btn-toggle-nav a:focus {
+    background-color: #d2f4ea;
+} */
 #find-section{
     display: flex;
     flex-wrap: nowrap;
@@ -82,6 +97,45 @@ a.btn:before{
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+
+.details {
+    border: 1.5px solid grey;
+    color: #212121;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px #212121;
+    margin-top: 10px;
+}
+.cart {
+    background-color: #212121;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    width: 100%;
+    height: 39px;
+    padding-top: 9px;
+    box-shadow: 0px 5px 10px  #212121;
+}
+.card {
+    width: fit-content;
+}
+.card-body {
+    width: fit-content;
+}
+.btn {
+    border-radius: 0;
+}
+/* .img-thumbnail {
+    border: none;
+} */
+.card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+
 @media only screen and (max-width: 991px){
     .lgroup{
         height: 25vh;
